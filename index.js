@@ -51,13 +51,19 @@ const path = require('path')
 
 const http = require('http');
 
+const htmlcontent = fs.readFileSync('index.html','utf-8')
+
+
 const server = http.createServer((req,res) => {
     res.setHeader('Content-Type','text/html');
 
     res.write('<html><head> <title>node js class</title></head><body>');
     if(req.url === '/login'){
         res.write('<h1>Hello Login !')
-    }else{
+    }else if(req.url === '/file'){
+        res.write(htmlcontent);
+    }
+    else{
         res.write('<h1>Hello World !</h1>');
     }
     res.write('</body></html>');
