@@ -7,8 +7,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "nodemailer": "^6.9.14"
-  }
+  "description": ""
 }
